@@ -1,7 +1,32 @@
 * {
-  font-size: 50px;
+  font-family: 'Patua One', cursive;
+  background-color: white !important;
 }
 
-.header {
-  font-size: 50px;
+.ui-page .ui-header {
+    background: white !important;
+}
+
+.ui-header {
+  font-size: 70px !important;
+}
+
+#restaraunt-image {
+ width: 900px;
+ height: 576px;
+ padding-left: 20px;
+
+}
+
+#left, #right {
+  display: inline-block;
+  font-size: 70px;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
 }
