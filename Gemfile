@@ -4,28 +4,25 @@ source 'https://rubygems.org'
 gem 'pg'
 
 # Sinatra driver
-gem 'sinatra'
+gem 'sinatra', '~>1.4'
 gem 'sinatra-contrib'
 
-gem 'activesupport'
-gem 'activerecord'
-gem 'bcrypt-ruby'
-gem 'pry'
-
+gem 'activesupport', '~>4.2.0'
+gem 'activerecord', '~>4.2.0'
+gem 'puma'
 gem 'rake'
-
-
+gem 'rack', '1.5.2'
 gem 'shotgun'
+gem 'pry'
+gem 'dotenv'
+gem 'yelp'
 
 group :test do
-  gem 'database_cleaner', '~> 1.4.1'
   gem 'shoulda-matchers'
   gem 'rack-test'
-  gem 'rspec'
+  gem 'rspec', '~>3.0'
   gem 'capybara'
-end
-
-group :test, :development do
+  gem 'database_cleaner'
   gem 'factory_girl'
   gem 'faker'
 end
