@@ -1,5 +1,5 @@
 get '/' do
-  "Hello!"
+  erb :'index'
 end
 
 get '/restaraunts' do
