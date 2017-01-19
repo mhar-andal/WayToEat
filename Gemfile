@@ -13,7 +13,7 @@ gem 'bcrypt-ruby'
 gem 'pry'
 
 gem 'rake'
-gem 'puma'
+
 
 gem 'shotgun'
 
