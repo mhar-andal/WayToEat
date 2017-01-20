@@ -1,23 +1,59 @@
 <div data-role="page" id="page1">
   <div data-role="header" class="header">
-    <h1>WayToEat</h1>
+    <span id="title"><center>WayToEat</center></h1>
   </div>
 
   <div data-role="main" class="ui-content">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- start padding container -->
+    <div class="wrap">
+        <!-- start jtinder container -->
+        <div id="tinderslide">
+            <ul>
+                <li class="pane1">
+                    <div class="img"></div>
+                    <div>Nini's Deli</div>
+                    <div class="desc">Casual Cuban Deli</div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </li>
+                <li class="pane2">
+                    <div class="img"></div>
+                    <div>Raymond's Hamburgers and Tacos</div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </li>
+                <li class="pane3">
+                    <div class="img"></div>
+                    <div>Au Cheval</div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </li>
+                <li class="pane4">
+                    <div class="img"></div>
+                    <div>Sawada Coffee</div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </li>
+                <li class="pane5">
+                    <div class="img"></div>
+                    <div>Nano's Peri-Peri</div>
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </li>
+            </ul>
+        </div>
+        <!-- end jtinder container -->
+    </div>
+    <!-- end padding container -->
 
-    <img id="restaraunt-image" src="/img/nini.jpg" style="margin: 0 auto;">
-    <br>
-    <br>
-    <br>
-    <span id="left">No</span>
-    <span id="right">Yes</span>
+    <!-- jTinder trigger by buttons  -->
+    <div class="actions">
+        <a href="#" class="dislike"><i></i></a>
+        <a href="#" class="like"><i></i></a>
+    </div>
+
+    <!-- jTinder status text  -->
+    <div id="status"></div>
   </div>
 
   <div data-role="footer">
@@ -26,3 +62,4 @@
 </div>
 
 </div>
+<script>$("#tinderslide").jTinder();</script>
