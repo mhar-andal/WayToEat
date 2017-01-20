@@ -121,11 +121,8 @@ DEPENDENCIES
   faker
   pg
   pry
-<<<<<<< HEAD
-=======
   puma
   rack (= 1.5.2)
->>>>>>> c7d773b4b1a746b6fcb63d4ed96acb2367c00b61
   rack-test
   rake
   rspec (~> 3.0)
