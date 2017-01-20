@@ -22,12 +22,12 @@ require 'bcrypt'
 require 'erb'
 require 'yelp'
 
-# Yelp.client.configure do |config|
-#   config.consumer_key = ENV['CONSUMER_KEY']
-#   config.consumer_secret = ENV['CONSUMER_SECRET']
-#   config.token = ENV['TOKEN']
-#   config.token_secret = ENV['TOKEN_SECRET']
-# end
+Yelp.client.configure do |config|
+  config.consumer_key = ENV['CONSUMER_KEY']
+  config.consumer_secret = ENV['CONSUMER_SECRET']
+  config.token = ENV['TOKEN']
+  config.token_secret = ENV['TOKEN_SECRET']
+end
 
 
 # Some helper constants for path-centric logic

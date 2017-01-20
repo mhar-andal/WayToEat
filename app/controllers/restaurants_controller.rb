@@ -8,9 +8,9 @@ get '/restaurants' do
     }
 
      @restaurants = parse_restaurants(query_params)
-     # .collect{|restaurant| {:"#{restaurant.id}" => restaurant.as_json}}
-     # content_type :json
-     #  @restaurants.join("")
      erb :'restaurants/_show', layout: false
   end
 end
+     # .collect{|restaurant| {:"#{restaurant.id}" => restaurant.as_json}}
+     # content_type :json
+     #  @restaurants.join("")
