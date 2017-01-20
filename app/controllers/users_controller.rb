@@ -1,13 +1,15 @@
 post '/users' do
   @user = User.new(params[:user])
   if @user.save
-    set_user(@user)
-    redirect '/'
+    if request.xhr?
+      set_user(@user)
+      redirect '/'
+    end
   else
     if request.xhr?
-    @errors = @user.errors.full_messages
-    erb :'/errors/_errors', layout: false
-  end
+      @errors = @user.errors.full_messages
+      erb :'/errors/_errors', layout: false
+    end
   end
 end
 
@@ -19,12 +21,18 @@ post '/sessions' do
       set_user(@user)
       redirect '/'
     else
-      @errors = ["Password is incorrect"]
+      @errors = ["Username/email/password is incorrect"]
+      erb :'/errors/_errors', layout: false
     end
   else
     if request.xhr?
-      @errors = ["Username/email is incorrect"]
+      @errors = ["Username/email/password is incorrect"]
       erb :'/errors/_errors', layout: false
     end
   end
+end
+
+delete '/sessions' do
+  session.clear
+  redirect '/'
 end

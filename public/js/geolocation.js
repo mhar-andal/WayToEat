@@ -5,7 +5,6 @@ var getNearRestaurants = function(){
   userGeo.getCurrentPosition(function(position){
 
     var geoData = position.coords;
-
       $.ajax({
         url: '/restaurants',
         type: 'GET',

@@ -18,7 +18,7 @@ $(document).ready(function() {
          data: formdata
        })
        .done(function(response) {
-         $(".errors").replaceWith(response);
+         window.location = "http://localhost:9393/";
        });
     } else {
       $.ajax({
@@ -27,10 +27,21 @@ $(document).ready(function() {
         data: formdata
       })
       .done(function(response) {
-        $(".errors").replaceWith(response);
+        window.location = "http://localhost:9393/";
       });
     }
 
+  });
+
+  $("#navbar-id").on("submit", "#logout-button", function(e) {
+    e.preventDefault();
+    $.ajax({
+      method: 'delete',
+      url: '/sessions'
+    })
+    .done(function() {
+      window.location = "http://localhost:9393/";
+    });
   })
 
 });
