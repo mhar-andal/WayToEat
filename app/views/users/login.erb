@@ -1,0 +1,26 @@
+<div class="login-content">
+  <div class="errors">
+    <% if @errors %>
+    <% @errors.each do |error| %>
+      <center><%= error %></center>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="login-register">
+    <form id="#form">
+      <div class="ui-field-contain">
+        <center><label for="fullname">Username:</label></center>
+        <input type="text" name="user[username]" id="fullname">
+
+        <center><label for="bday">Email:</label></center>
+        <input type="text" name="user[email]" id="bday">
+
+        <center><label for="email">Password:</label></center>
+        <input type="password" name="user[password]" id="email">
+
+        <input type="submit" value="Login" id="login-submit">
+        <input type="submit" value="Register" id="register-submit">
+      </div>
+    </form>
+  </div>
+</div>
