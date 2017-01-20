@@ -1,5 +1,5 @@
 <%@restaurants.each do |restaurant| %>
-  <li id="<%=restaurant.id%>" class="pane">
+  <li id="<%=restaurant.id%>" class="pane<%=restaurant.id%>">
       <div class="img" style="background: url(<%=restaurant.image_url%>) no-repeat scroll center center; background-size: cover;"></div>
       <div><%=restaurant.name%></div>
       <div class="desc">Casual Cuban Deli</div>
@@ -7,3 +7,4 @@
       <div class="dislike"></div>
   </li>
 <% end %>
+<script>$("#tinderslide").jTinder();</script>

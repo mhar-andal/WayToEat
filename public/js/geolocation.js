@@ -1,8 +1,10 @@
-$(document).on('ready',function(){
+// $(document).on('ready',);
+// });
+var getNearRestaurants = function(){
   userGeo = navigator.geolocation
   userGeo.getCurrentPosition(function(position){
 
-    var geoData = position.coords
+    var geoData = position.coords;
 
       $.ajax({
         url: '/restaurants',
@@ -14,4 +16,4 @@ $(document).on('ready',function(){
       });
 
   });
-});
+};
