@@ -16,6 +16,8 @@ gem 'shotgun'
 gem 'pry'
 gem 'dotenv'
 gem 'yelp'
+gem 'oauth-simple', '~> 0.3.1'
+gem 'yaml'
 
 group :test do
   gem 'shoulda-matchers'

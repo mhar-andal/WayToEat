@@ -15,11 +15,22 @@ require 'pg'
 require 'active_record'
 require 'logger'
 require 'pry'
+require 'dotenv'
+require 'yelp'
+require 'oauth-simple'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
+
+Yelp.client.configure do |config|
+  config.consumer_key = ENV['CONSUMER_KEY']
+  config.consumer_secret = ENV['CONSUMER_SECRET']
+  config.token = ENV['TOKEN']
+  config.token_secret = ENV['TOKEN_SECRET']
+end
+
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
