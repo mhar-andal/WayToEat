@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <% @favorites.each do |favorite| %>
+    <%=erb(:'favorites/_show', locals:{favorite: favorite}, layout: false) %>
+    <% end %>
+  </ul>
+</div>
