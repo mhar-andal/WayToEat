@@ -24,6 +24,7 @@ application.css is where you put your styles
 
 
 <link rel="stylesheet" href="/css/application.css">
+<script src="/js/geolocation.js"></script>
 <script src="/js/application.js"></script>
 
 
@@ -37,6 +38,24 @@ application.css is where you put your styles
 <script type="text/javascript" src="/js/main.js"></script>
 
 <body>
+  <div data-role="page" id="page1">
+    <div data-role="header" class="header">
+      <span id="title"><center>WayToEat</center></h1>
+    </div>
   <%= yield %>
+  <div data-role="footer">
+    <% if logged_in? %>
+    <div data-role="navbar">
+    		<ul>
+    			<li><a href="a.html">Profile</a></li>
+    			<li><a href="b.html">Favorites</a></li>
+          <li><a href="b.html">Logout</a></li>
+    		</ul>
+    	</div><!-- /navbar -->
+      <% end %>
+  </div>
+</div>
+
+</div>
 </body>
 </html>
