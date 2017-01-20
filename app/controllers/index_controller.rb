@@ -1,5 +1,9 @@
 get '/' do
-  erb :'index'
+  if logged_in?
+    erb :'index'
+  else
+    erb :'/users/login'
+  end
 end
 
 get '/restaraunts' do
