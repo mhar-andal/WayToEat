@@ -16,6 +16,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'dotenv'
 gem 'yelp'
+gem 'bcrypt'
 
 group :test do
   gem 'shoulda-matchers'
