@@ -7,15 +7,13 @@
     background: white !important;
 }
 
-.ui-header {
-  font-size: 70px !important;
+#title {
+  font-size: 65px !important;
+  text-align: center;
 }
 
 #restaraunt-image {
- width: 900px;
- height: 576px;
- padding-left: 20px;
-
+ width: 75%;
 }
 
 #left, #right {

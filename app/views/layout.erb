@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="css/jTinder.css">
 <head>
   <!--
   normalize.css removes cross-browser differences in defaults, e.g.,
@@ -14,10 +15,13 @@ application.css is where you put your styles
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="https://code.jquery.com/jquery-3.1.1.js"
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>>
+  crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <link rel="stylesheet" href="/css/application.css">
 <script src="/js/application.js"></script>
@@ -25,6 +29,13 @@ application.css is where you put your styles
 
 <title></title>
 </head>
+    <!-- transform2d lib -->
+<script type="text/javascript" src="/js/jquery.transform2d.js"></script>
+    <!-- jTinder lib -->
+<script type="text/javascript" src="/js/jquery.jTinder.js"></script>
+    <!-- jTinder initialization script -->
+<script type="text/javascript" src="/js/main.js"></script>
+
 <body>
   <%= yield %>
 </body>
