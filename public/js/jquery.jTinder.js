@@ -59,7 +59,23 @@
 			current_pane = index;
 		},
 
-		next: function () {
+		next: function (like) {
+				if(like == true){
+					$.ajax({
+						url: 'users/favorites',
+						type: 'post',
+						data: {restaurant_id: current_pane}
+					})
+					.done(function() {
+						console.log("success");
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+				};
 			return this.showPane(current_pane - 1);
 		},
 
@@ -68,7 +84,7 @@
 				if($that.settings.onDislike) {
 					$that.settings.onDislike(panes.eq(current_pane));
 				}
-				$that.next();
+				$that.next(false);
 			});
 		},
 
@@ -77,7 +93,7 @@
 				if($that.settings.onLike) {
 					$that.settings.onLike(panes.eq(current_pane));
 				}
-				$that.next();
+				$that.next(true);
 			});
 		},
 
@@ -142,14 +158,14 @@
 								if($that.settings.onLike) {
 									$that.settings.onLike(panes.eq(current_pane));
 								}
-								$that.next();
+								$that.next(true);
 							});
 						} else {
 							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width) + "px," + (posY + pane_width) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
 								if($that.settings.onDislike) {
 									$that.settings.onDislike(panes.eq(current_pane));
 								}
-								$that.next();
+								$that.next(false);
 							});
 						}
 					} else {

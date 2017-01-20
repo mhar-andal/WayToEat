@@ -41,7 +41,7 @@ application.css is where you put your styles
 <body>
   <div data-role="page" id="page1">
     <div data-role="header" class="header">
-      <span id="title"><center>WayToEat</center></h1>
+      <span id="title"><center><a style='text-decoration:none; color: black;'href="/">WayToEat</a></center></h1>
     </div>
   <%= yield %>
   <div data-role="footer">
@@ -49,10 +49,15 @@ application.css is where you put your styles
     <div data-role="navbar" id="navbar-id">
     		<ul>
     			<li><a href="a.html">Profile</a></li>
+
+    			<li><a href="/users/<%=current_user.id%>/favorites">Favorites</a></li>
+          <li><a href="b.html">Logout</a></li>
+
     			<li><a href="b.html">Favorites</a></li>
           <form action="/sessions" method="post" id="logout-button">
             <li><input type="submit" value="Logout"></li>
         </form>
+
     		</ul>
     	</div><!-- /navbar -->
       <% end %>
